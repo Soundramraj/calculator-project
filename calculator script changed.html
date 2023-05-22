@@ -1,0 +1,111 @@
+<!DOCTYPE html>  
+<html lang = "en">  
+<head>  
+<title> JavaScript Calculator </title>  
+ 
+<style>  
+h1 {  
+text-align: center;  
+padding: 23px;  
+background-color:orange;  
+color: white;  
+ }  
+  
+.formstyle  
+{  
+width: 300px;  
+height: 530px;  
+margin: auto;  
+border: 5px solid pink;  
+border-radius: 5px;  
+padding:37px;  
+}  
+  
+#calc{  
+width: 250px;  
+border: 5px solid black;  
+border-radius: 3px;  
+padding: 20px;  
+margin: auto;  
+}  
+
+  
+input  
+{  
+width: 20px;  
+background-color:orange;  
+color: white;  
+border: 3px solid gray;  
+ border-radius: 5px;  
+padding: 26px;  
+margin: 5px;  
+font-size: 15px;  
+}  
+  
+ #clear{  
+width: 270px;  
+border: 3px solid gray;  
+border-radius: 3px;  
+padding: 20px;  
+background-color:green;  
+}  
+  
+</style>  
+  
+</head>  
+<script>
+	function displayInput(val){
+	   document.getElementById('calc').value += val;
+	  
+	}
+	function calculate() {
+	   var input = document.getElementById('calc').value;
+	   var output = eval(input);
+	   document.getElementById('calc').value = output;
+	}
+	function clearScreen() {
+	   document.getElementById('calc').value='';
+	 
+	}
+</script>
+<body>  
+<h1>CALCULATOR </h1>  
+<div class= "formstyle">  
+<form name = "form1">  
+      
+ 
+  <input type ="text" name = "answer" id = "calc"> <br> <br>  
+  
+  <input type = "button" value = "1" onclick = "displayInput('1');">  
+  <input type = "button" value = "2" onclick = "displayInput('2');">  
+  <input type = "button" value = "3" onclick = "displayInput('3');">  
+   <input type = "button" value = "+" onclick = "displayInput('+');">  
+  <br> <br>  
+    
+  <input type = "button" value = "4" onclick = "displayInput('4');">  
+  <input type = "button" value = "5" onclick = "displayInput('5');">  
+  <input type = "button" value = "6" onclick = "displayInput('6');">  
+  <input type = "button" value = "-" onclick = "displayInput('-');">  
+  <br> <br>  
+    
+  <input type = "button" value = "7" onclick = "displayInput('7');">  
+  <input type = "button" value = "8" onclick = "displayInput('8');">  
+  <input type = "button" value = "9" onclick = "displayInput('9');">  
+  <input type = "button" value = "*" onclick = "displayInput('*');">  
+  <br> <br>  
+    
+    
+  <input type = "button" value = "/" onclick = "displayInput('/');">  
+  <input type = "button" value = "0" onclick = "displayInput('0');">  
+  <input type = "button" value = "." onclick = "displayInput('.');">  
+   
+  <input type = "button" value = "=" onclick = "calculate();">  
+  <br>   
+ 
+  <input type = "button" value = "Clear" onclick = "clearScreen();" id="clear">  
+  <br>   
+    
+</form>  
+</div>  
+</body>  
+</html>  
